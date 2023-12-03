@@ -1,2 +1,3 @@
-# Curso_Python
-Apuntes curso Python
+# Curso Python
+Apuntes del curso de Python
+(Python course notes)

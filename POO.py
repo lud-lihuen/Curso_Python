@@ -288,3 +288,29 @@ class Clase(ClasePlantilla):
 #Llamar al metodo abstracto y al generico:
 Clase.metodo_abstracto()
 Clase.metodo_generico()
+
+# ------------------------------
+# METODOS ESPECIALES (DUNDER)
+# ------------------------------
+
+#Son metodos integrados para cumplir funciones especiales
+#Se señalizan con doble guion bajo al inicio y al final de su nombre
+#Ejemplo: __init__ (metodo constructor)
+
+class Clase:
+    #Metodo constructor:
+    def __init__(self, atributo1, atributo2):
+        self.atributo1 = atributo1
+        self.atributo2 = atributo2
+    
+    #Metodo para mostrar objeto como string al hacer print(objeto):
+    def __str__(self):
+        return f'Clase(atributo1={self.atributo1}, atributo2={self.atributo2})'
+    
+    #Metodo para mostrar representacion del objeto al hacer eval(repr(objeto)):
+    def __repr__(self):
+        return f'Clase({self.atributo1}, {self.atributo2})'
+    
+#Muchos metodos especiales permiten sobrecarga de metodos
+#Ejemplo: definir lo que pasa al sumar dos objetos de cierta clase:
+# __add__(self, other)

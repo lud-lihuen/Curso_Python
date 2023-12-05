@@ -254,3 +254,37 @@ atributo = objeto.atributo
 objeto.atributo = 'Nuevo valor'
 #Llamar al deleter como propiedad:
 del objeto.atributo
+
+# ------------------------------
+# CLASES ABSTRACTAS
+# ------------------------------
+
+#Abstraccion: ocultar la complejidad de la logica interna de las funciones
+#Clases abstractas: plantillas para crear otras clases, no objetos
+
+#Crear clase abstracta:
+from abc import ABC, abstractclassmethod
+
+class ClasePlantilla(ABC):
+    @abstractclassmethod
+    def __init__(self, atributo):
+        self.atributo = atributo
+    
+    @abstractclassmethod
+    def metodo_abstracto(self):
+        pass
+    
+    def metodo_generico(self):
+        print(f'{self}')
+
+#Crear clase a partir de plantilla:
+class Clase(ClasePlantilla):
+    def __init__(self, atributo):
+        super().__init__(atributo)
+    
+    def metodo_abstracto(self):
+        print(f'{self.atributo}')
+
+#Llamar al metodo abstracto y al generico:
+Clase.metodo_abstracto()
+Clase.metodo_generico()

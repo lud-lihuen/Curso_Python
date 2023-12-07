@@ -314,3 +314,42 @@ class Clase:
 #Muchos metodos especiales permiten sobrecarga de metodos
 #Ejemplo: definir lo que pasa al sumar dos objetos de cierta clase:
 # __add__(self, other)
+
+# ------------------------------
+# PRINCIPIOS SOLID
+# ------------------------------
+
+#Convenciones y buenas practicas para facilitar el mantenimiento y escalabilidad del codigo
+
+# S - SRP: Principio de Responsabilidad Unico
+# O - OCP: Principio de Abierto/Cerrado
+# L - LSP: Principio de Sustitucion de Liskov
+# I - ISP: Principio de Segregacion de Interfaz
+# D - DIP: Principio de Inversion de Dependencias
+
+# SINGLE RESPONSABILITY PRINCIPLE
+
+#Cada clase tiene que tener una unica responsabilidad o funcionalidad
+#Cada clase debe poder cumplir con su funcionalidad sin depender de otras
+
+# OPEN/CLOSED PRINCIPLE
+
+#Las entidades tienen que estar abiertas para la extension pero cerradas para la modificacion
+#Se debe poder gregar funcionalidades sin tener que modificar las ya existentes
+
+# LISKOV'S SUBSTITUTION PRINCIPLE
+
+#Por Barbara Liskov
+#Las clases derivadas deben ser sustituibles por sus clases base
+#Una clase debe poder utilizarse en todos los lugares donde su subclase pueda utilizarse
+
+# INTERFACE SEGREGATION PRINCIPLE
+
+#Ningun cliente debe ser forzado a depender de interfaces que no utilice
+#Se debe eliminar las dependencias que no se van a utilizar
+
+# DEPENDENCY INVERSION PRINCIPLE
+
+#Los modulos de alto nivel no deben depender de los de bajo nivel, ambos deben depender de las abstracciones
+#Las abstracciones no deben depender de los detalles, sino al reves
+#Es decir: las funcionalidades mas basicas no deben depender de las mas especificas, sino al reves
